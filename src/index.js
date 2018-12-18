@@ -3,14 +3,13 @@ import ReactDOM from "react-dom";
 
 import "./styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
-}
-
+<div id="root" />;
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const Message = props => <div>{props.msg}</div>;
+const element = (
+  <div className="container">
+    <Message msg="Hello World!" />
+    <Message msg="Goodbye World!" />
+  </div>
+);
+ReactDOM.render(element, rootElement);
